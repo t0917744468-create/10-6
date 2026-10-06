@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah | 12年客服管理專家 & AI數位客服顧問</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icon CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#475569',
+                        accent: '#0d9488',
+                        dark: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- 導覽列 -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold tracking-wider text-slate-900">
+                        HANNAH<span class="text-primary">.CS</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-slate-600 hover:text-primary transition-colors font-medium">首頁</a>
+                    <a href="#about" class="text-slate-600 hover:text-primary transition-colors font-medium">關於我</a>
+                    <a href="#portfolio" class="text-slate-600 hover:text-primary transition-colors font-medium">作品集與案例</a>
+                    <a href="#faq" class="text-slate-600 hover:text-primary transition-colors font-medium">常見問題</a>
+                    <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium shadow-md transition-all">聯絡諮詢</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-2">
+            <a href="#home" class="block px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-md font-medium">首頁</a>
+            <a href="#about" class="block px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-md font-medium">關於我</a>
+            <a href="#portfolio" class="block px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-md font-medium">作品集與案例</a>
+            <a href="#faq" class="block px-3 py-2 text-slate-600 hover:bg-slate-100 rounded-md font-medium">常見問題</a>
+            <a href="#contact" class="block px-3 py-2 bg-primary text-white rounded-md font-medium text-center">聯絡諮詢</a>
+        </div>
+    </nav>
+
+    <!-- 首頁 Banner -->
+    <section id="home" class="pt-28 pb-20 md:pt-36 md:pb-28 bg-gradient-to-br from-slate-900 via-slate-800 to-blue-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-400/30 text-blue-300 px-3 py-1 rounded-full text-sm">
+                        <i class="fa-solid fa-sparkles text-xs"></i>
+                        <span>12 年客服實務與團隊管理資歷</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight">
+                        用專業管理與 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">AI 數位工具</span><br>
+                        打造卓越服務體驗
+                    </h1>
+                    <p class="text-slate-300 text-lg leading-relaxed">
+                        從第一線客訴應變到帶領 25 人跨組團隊，專精於 SOP 建置與優化、排班規劃、KPI 追蹤改善及 AI 賦能轉型。
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#portfolio" class="bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg shadow-blue-500/30 transition-all flex items-center gap-2">
+                            <span>查看精選案例</span>
+                            <i class="fa-solid fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#contact" class="bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-6 py-3 rounded-xl font-semibold transition-all">
+                            立即諮詢合作
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 數據亮點卡片 -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-800/80 backdrop-blur border border-slate-700/60 p-6 rounded-2xl">
+                        <div class="text-primary text-3xl font-extrabold mb-1">12+</div>
+                        <div class="text-sm font-semibold text-slate-200 mb-1">年深耕經驗</div>
+                        <div class="text-xs text-slate-400">涵蓋大眾運輸、遊戲外包與電商平台</div>
+                    </div>
+                    <div class="bg-slate-800/80 backdrop-blur border border-slate-700/60 p-6 rounded-2xl">
+                        <div class="text-teal-400 text-3xl font-extrabold mb-1">25 人</div>
+                        <div class="text-sm font-semibold text-slate-200 mb-1">最高管理規模</div>
+                        <div class="text-xs text-slate-400">跨 4 個小隊營運調度與績效評估</div>
+                    </div>
+                    <div class="bg-slate-800/80 backdrop-blur border border-slate-700/60 p-6 rounded-2xl">
+                        <div class="text-blue-400 text-3xl font-extrabold mb-1">SOP</div>
+                        <div class="text-sm font-semibold text-slate-200 mb-1">流程精準優化</div>
+                        <div class="text-xs text-slate-400">重大客訴降溫與激勵制度推動</div>
+                    </div>
+                    <div class="bg-slate-800/80 backdrop-blur border border-slate-700/60 p-6 rounded-2xl">
+                        <div class="text-amber-400 text-3xl font-extrabold mb-1">AI</div>
+                        <div class="text-sm font-semibold text-slate-200 mb-1">數位升級進修</div>
+                        <div class="text-xs text-slate-400">結合生成式 AI 輔助客服轉型</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">關於 Hannah</h2>
+                <div class="w-16 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-600 text-lg leading-relaxed">
+                    擁有超過 12 年的客服領域深耕經驗，我的職業生涯從最扎實的一線服務起步，一路成長為帶領 25 人、跨 4 個小隊的客服主管。這段歷程讓我不僅懂客訴現場的痛點，更具備全局思維，能為企業打造穩定且高效的服務營運體系。
+                </p>
+            </div>
+
+            <!-- 經歷時間軸與專業能力 -->
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                
+                <!-- 時間軸 -->
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase text-primary"></i> 跨產業實戰經歷
+                    </h3>
+                    <div class="space-y-6 relative before:absolute before:inset-0 before:left-3 before:w-0.5 before:bg-slate-200">
+                        <div class="relative pl-8">
+                            <span class="absolute left-0 top-1.5 w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <h4 class="font-bold text-slate-800">遊戲客服外包商 — 客服主管</h4>
+                            <p class="text-sm text-slate-500 mb-2">團隊營運 & 跨組管理</p>
+                            <p class="text-sm text-slate-600">領導 4 個小隊最高 25 人團隊，專責日常營運排班、KPI 改善面談與 SOP 制定優化。</p>
+                        </div>
+
+                        <div class="relative pl-8">
+                            <span class="absolute left-0 top-1.5 w-6 h-6 bg-slate-400 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fa-solid fa-taxi"></i>
+                            </span>
+                            <h4 class="font-bold text-slate-800">台中計程車公會 — 客服人員</h4>
+                            <p class="text-sm text-slate-500 mb-2">第一線溝通 & 大眾服務</p>
+                            <p class="text-sm text-slate-600">處理即時派車需求、民眾諮詢與緊急客訴應變，累積敏銳的客訴情緒降溫技巧。</p>
+                        </div>
+
+                        <div class="relative pl-8">
+                            <span class="absolute left-0 top-1.5 w-6 h-6 bg-slate-400 rounded-full flex items-center justify-center text-white text-xs">
+                                <i class="fa-solid fa-store"></i>
+                            </span>
+                            <h4 class="font-bold text-slate-800">蝦皮購物平台 — 兼職客服</h4>
+                            <p class="text-sm text-slate-500 mb-2">電商平台 & 靈活應變</p>
+                            <p class="text-sm text-slate-600">掌握快節奏電商服務體驗，處理訂單退換貨、買賣雙方爭議協調與高效率文字回覆。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 核心技能區塊 -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-gears text-primary"></i> 核心管理與專業技能
+                    </h3>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-primary text-xl mb-2"><i class="fa-solid fa-users"></i></div>
+                            <h4 class="font-bold text-slate-800 mb-1">團隊領導與排班調度</h4>
+                            <p class="text-xs text-slate-500">25 人規模人力精密配比與彈性排班機制</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-teal-600 text-xl mb-2"><i class="fa-solid fa-file-signature"></i></div>
+                            <h4 class="font-bold text-slate-800 mb-1">SOP 建置與流程改進</h4>
+                            <p class="text-xs text-slate-500">標準服務化建構與重大危機處置 SOP</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-blue-600 text-xl mb-2"><i class="fa-solid fa-chart-line"></i></div>
+                            <h4 class="font-bold text-slate-800 mb-1">KPI 追蹤與激勵制度</h4>
+                            <p class="text-xs text-slate-500">績效面談、數據追蹤與個人職涯輔導</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+                            <div class="text-amber-500 text-xl mb-2"><i class="fa-solid fa-robot"></i></div>
+                            <h4 class="font-bold text-slate-800 mb-1">AI 數位工具應用</h4>
+                            <p class="text-xs text-slate-500">持續進修將科技融於人性化客服流程</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品集與案例展示 -->
+    <section id="portfolio" class="py-20 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">精選專案與案例展示</h2>
+                <p class="text-slate-600">呈現從團隊運作到流程重組的實際成效</p>
+            </div>
+
+            <!-- 卡片展示區 -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="inline-block bg-blue-100 text-primary font-semibold text-xs px-3 py-1 rounded-full mb-4">團隊管理</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">25人多小隊人力調度與排班系統</h3>
+                        <p class="text-slate-600 text-sm mb-4">重新規劃 4 個小隊的輪班與離峰補位機制，有效提升人力覆蓋率與回應速度。</p>
+                    </div>
+                    <button onclick="openModal('case1')" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">
+                        查看專案細節 <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="inline-block bg-teal-100 text-teal-700 font-semibold text-xs px-3 py-1 rounded-full mb-4">流程優化</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">重大客訴降溫與 SOP 標準流程</h3>
+                        <p class="text-slate-600 text-sm mb-4">針對遊戲重大障礙制定三階段應處 SOP，減緩第一線面對激烈情緒的壓力。</p>
+                    </div>
+                    <button onclick="openModal('case2')" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">
+                        查看專案細節 <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="inline-block bg-amber-100 text-amber-700 font-semibold text-xs px-3 py-1 rounded-full mb-4">AI 應用</div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">AI 數位客服助手導入計畫</h3>
+                        <p class="text-slate-600 text-sm mb-4">進修 AI 賦能工具，設計常見問題回答模板與自動化語意輔助回覆模型。</p>
+                    </div>
+                    <button onclick="openModal('case3')" class="text-primary font-semibold text-sm hover:underline flex items-center gap-1">
+                        查看專案細節 <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常見問題 FAQ -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">常見問題 FAQ</h2>
+                <p class="text-slate-600">了解更多合作形式與諮詢範疇</p>
+            </div>
+
+            <div class="space-y-4">
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 bg-slate-50 hover:bg-slate-100 text-left font-bold text-slate-800">
+                        <span>請問 Hannah 可以提供哪些服務與諮詢？</span>
+                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden p-5 bg-white border-t border-slate-200 text-slate-600 text-sm leading-relaxed">
+                        包含客服團隊建立、SOP 流程優化與撰寫、排班機制規劃、KPI 追蹤評估顧問、客服培訓與 AI 數位客服轉型輔導。
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-xl overflow-hidden">
+                    <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 bg-slate-50 hover:bg-slate-100 text-left font-bold text-slate-800">
+                        <span>目前適合哪一種規模的團隊進行流程優化？</span>
+                        <i class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="hidden p-5 bg-white border-t border-slate-200 text-slate-600 text-sm leading-relaxed">
+                        無論是草創期 3-5 人小型團隊，或是 20 人以上的跨小隊營運，都能根據現有架構進行客製化的 SOP 與 KPI 梳理。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡我 -->
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">聯絡 Hannah</h2>
+                <p class="text-slate-400">歡迎交流客服管理、SOP 建置或 AI 工具應用需求</p>
+            </div>
+
+            <form onsubmit="handleSubmit(event)" class="space-y-6 bg-slate-800/60 p-8 rounded-2xl border border-slate-700">
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">姓名 / 稱呼</label>
+                        <input type="text" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary" placeholder="例如：王小明">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-300 mb-2">電子郵件</label>
+                        <input type="email" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary" placeholder="yourname@example.com">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">諮詢或合作項目</label>
+                    <select class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary">
+                        <option>客服 SOP 建置與流程優化</option>
+                        <option>團隊排班與 KPI 評估輔導</option>
+                        <option>AI 數位客服轉型諮詢</option>
+                        <option>其他合作交流</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-300 mb-2">訊息內容</label>
+                    <textarea rows="4" required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary" placeholder="請簡述您的需求..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition-all shadow-lg">
+                    送出訊息
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Modal 彈窗機制 -->
+    <div id="modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative animate-fade-in">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <h3 id="modal-title" class="text-xl font-bold text-slate-900 mb-4">案例細節</h3>
+            <p id="modal-content" class="text-slate-600 text-sm leading-relaxed mb-6">更詳細的案例內容說明...</p>
+            <button onclick="closeModal()" class="w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-2 rounded-lg text-sm">關閉視窗</button>
+        </div>
+    </div>
+
+    <!-- JS 邏輯 -->
+    <script>
+        // 行動端選單切換
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ 切換
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('i');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Modal 彈窗控制
+        const modalData = {
+            case1: {
+                title: "25人多小隊人力調度與排班系統",
+                content: "在遊戲外包團隊中，成功建構 4 個小隊的排班體系，搭配尖峰時刻的人力支援動態調度，降低人力空窗期的待答時間達 30%。"
+            },
+            case2: {
+                title: "重大客訴降溫與 SOP 標準流程",
+                content: "建置完整的客訴三級轉接處理流程，釐清客服層級授權範圍，有效將重複性與高衝突客訴的處理時間縮短，大幅減低團隊安撫成本。"
+            },
+            case3: {
+                title: "AI 數位客服助手導入計畫",
+                content: "探索與導入生成式 AI 輔助範本，將常見問答提示詞與檢索表標準化，協助新進客服將平均回覆時間縮短近 25%。"
+            }
+        };
+
+        function openModal(caseKey) {
+            const data = modalData[caseKey];
+            if(data) {
+                document.getElementById('modal-title').innerText = data.title;
+                document.getElementById('modal-content').innerText = data.content;
+                document.getElementById('modal').classList.remove('hidden');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+        }
+
+        // 表單提交
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('感謝您的訊息！Hannah 會盡快回覆您。');
+            e.target.reset();
+        }
+    </script>
+</body>
+</html>
